@@ -421,7 +421,7 @@ NOTION_DATABASE_ID=your_database_id
 NEXT_PUBLIC_AUTHOR_AVATAR_URL=/avatar.jpg
 ```
 
-**重要：** 永遠不要將 `.env.local` 提交到 git（已在 `.gitignore` 中排除）
+**重要：** 永遠不要將 `.env.local` 提交到 git（在 `.gitignore` 中排除）
 
 ### 6. 新增你的頭像
 
