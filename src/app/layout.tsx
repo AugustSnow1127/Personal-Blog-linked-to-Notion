@@ -13,6 +13,10 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "AugustSnow",
   description: "A personal blog powered by Notion",
+  icons: {
+    icon: '/avatar.jpg',
+    apple: '/avatar.jpg',
+  },
 };
 
 export default function RootLayout({
