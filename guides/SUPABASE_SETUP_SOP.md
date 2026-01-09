@@ -12,6 +12,17 @@
 6. 選擇最近的 **Region** (例如: `Tokyo` 或 `Singapore`)
 7. 點擊 **"Create new project"**
 
+## 1.5 設定 正式網域 Redirect (重要！)
+
+為了避免登入後跳轉回 localhost，您必須設定 URL Configuration：
+
+1. 在左側選單點擊 **Authentication** -> **URL Configuration**
+2. **Site URL**: 將其改為您的正式網址，例如 `https://www.augustsnow.com`
+3. **Redirect URLs**: 點擊 "Add URL"，確保加入以下網址：
+   - `http://localhost:3000/api/auth/callback` (本地開發用)
+   - `https://www.augustsnow.com/api/auth/callback` (正式上線用 - **請換成您的實際網域**)
+4. 點擊 **Save**
+
 ## 2. 設定 Authentication (GitHub Login)
 
 為了讓使用者能透過 GitHub 登入：
