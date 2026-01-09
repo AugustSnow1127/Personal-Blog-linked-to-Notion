@@ -29,7 +29,23 @@
    - 點擊 "Generate a new client secret" 並複製 **Client Secret**
 4. 回到 Supabase，填入剛剛複製的 ID 和 Secret 並儲存
 
-> 💡 **注意**: 上線後，您需要在 GitHub OAuth App 設定中新增您的正式網域 Callback URL，或者建立另一個正式用的 OAuth App。
+### 設定 Google Login (可選)
+
+1. 在 Supabase Dashboard 左側選單點擊 **Authentication** -> **Providers**
+2. 找到 **Google** 并點擊啟用
+3. 前往 [Google Cloud Console](https://console.cloud.google.com/)
+4. 建立新專案或選擇現有專案
+5. 前往 **APIs & Services** -> **OAuth consent screen**，設定應用程式名稱與支援信箱
+6. 前往 **Credentials** -> **Create Credentials** -> **OAuth client ID**
+7. 應用程式類型選擇 **Web application**
+8. 設定 **Authorized redirect URIs**：
+   - 本地開發填入：`http://localhost:3000/api/auth/callback`
+   - 上線後填入：`https://您的網域/api/auth/callback`
+   - 同時也需要填入 Supabase 的 Callback URL (可在 Supabase Provider 設定頁面上方找到)
+9. 複製 **Client ID** 與 **Client Secret**
+10. 回到 Supabase，填入 ID 和 Secret 並儲存
+
+> 💡 **注意**: 上線後，您需要在 GitHub/Google OAuth App 設定中新增您的正式網域 Callback URL。
 
 ## 3. 建立資料庫表格 (SQL Setup)
 

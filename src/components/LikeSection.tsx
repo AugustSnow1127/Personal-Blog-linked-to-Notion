@@ -41,7 +41,7 @@ export default function LikeSection({ slug }: { slug: string }) {
 
     const handleToggleLike = async () => {
         if (!currentUser) {
-            window.location.href = "/api/auth/login";
+            window.location.href = "/login";
             return;
         }
 

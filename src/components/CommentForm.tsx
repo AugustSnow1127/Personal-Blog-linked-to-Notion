@@ -16,14 +16,14 @@ export default function CommentForm({ currentUser, onSubmit, isSubmitting }: Com
         if (!currentUser) {
             e.preventDefault();
             // Redirect to login if not authenticated
-            window.location.href = "/api/auth/login";
+            window.location.href = "/login";
         }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!currentUser) {
-            window.location.href = "/api/auth/login";
+            window.location.href = "/login";
             return;
         }
 
