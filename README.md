@@ -56,9 +56,14 @@ npm install
 ```
 
 ### 2. Configure Notion
+
+> 📘 **Detailed Guide**: For detailed instructions on Notion setup, please refer to [guides/NOTION_SETUP_SOP.md](guides/NOTION_SETUP_SOP.md).
+
 Please refer to the official Notion API documentation to get your `NOTION_API_KEY` and `NOTION_DATABASE_ID`.
 
 ### 3. Configure Supabase
+
+> 📘 **Detailed Guide**: For a step-by-step tutorial, please refer to [guides/SUPABASE_SETUP_SOP.md](guides/SUPABASE_SETUP_SOP.md).
 
 1. Create a new Supabase project.
 2. Enable **GitHub** in **Authentication** -> **Providers**, and enter your Client ID and Secret.
@@ -113,6 +118,23 @@ npm run dev
 ```
 
 Visit [http://localhost:3000](http://localhost:3000) to see your blog!
+
+## 🌐 Deploy to Vercel
+
+> 📘 **Detailed Guide**: See [guides/VERCEL_DEPLOYMENT_SOP.md](guides/VERCEL_DEPLOYMENT_SOP.md) for full deployment instructions.
+
+1. Push your code to GitHub.
+2. Import your project in Vercel.
+3. **IMPORTANT**: Add the following Environment Variables in Vercel settings:
+   - `NOTION_API_KEY`
+   - `NOTION_DATABASE_ID`
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+4. Deploy!
+
+### Custom Domain
+
+> 📘 **Domain Setup**: If you want to use your own domain (e.g., www.yourname.com), follow the guide in [guides/DOMAIN_SETUP_SOP.md](guides/DOMAIN_SETUP_SOP.md).
 
 ## 🤝 Contributing
 

@@ -56,9 +56,14 @@ npm install
 ```
 
 ### 2. 設定 Notion (請參考原始文件)
+
+> 📘 **詳細指南**: 關於 Notion 的詳細設定步驟，請參考 [guides/NOTION_SETUP_SOP.md](guides/NOTION_SETUP_SOP.md)。
+
 請依照 Notion API 官方說明取得 `NOTION_API_KEY` 與 `NOTION_DATABASE_ID`。
 
 ### 3. 設定 Supabase
+
+> 📘 **詳細指南**: 請參考 [guides/SUPABASE_SETUP_SOP.md](guides/SUPABASE_SETUP_SOP.md) 以獲得詳細的圖文設定教學。
 
 1. 建立一個新的 Supabase 專案。
 2. 在 **Authentication** -> **Providers** 中啟用 **GitHub**，並填入 Client ID 和 Secret。
@@ -112,6 +117,23 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```bash
 npm run dev
 ```
+
+## 🌐 部署到 Vercel
+
+> 📘 **詳細指南**: 請參考 [guides/VERCEL_DEPLOYMENT_SOP.md](guides/VERCEL_DEPLOYMENT_SOP.md) 以獲得完整的部署流程說明。
+
+1. 將程式碼推送到 GitHub。
+2. 在 Vercel 匯入您的專案。
+3. **重要**：在 Vercel 設定中新增以下環境變數 (Environment Variables)：
+   - `NOTION_API_KEY`
+   - `NOTION_DATABASE_ID`
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+4. 點擊 Deploy！
+
+### 自訂網域
+
+> 📘 **網域設定**: 如果您想使用自己的網域（例如 www.yourname.com），請參考 [guides/DOMAIN_SETUP_SOP.md](guides/DOMAIN_SETUP_SOP.md)。
 
 ## 🤝 貢獻
 

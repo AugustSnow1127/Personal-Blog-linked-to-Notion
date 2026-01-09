@@ -127,3 +127,5 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=您的anon Key
 ```
 
 完成以上步驟後，您的部落格就具備完整的社群功能了！ 🎉
+
+> ⚠️ **部署提醒**: 當您部署到 Vercel 時，請務必在 Vercel 的 **Settings** -> **Environment Variables** 中設定 `NEXT_PUBLIC_SUPABASE_URL` 和 `NEXT_PUBLIC_SUPABASE_ANON_KEY`，否則網站會發生 500 錯誤。
