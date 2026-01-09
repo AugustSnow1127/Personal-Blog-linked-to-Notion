@@ -1,5 +1,7 @@
 # Personal Blog with Notion CMS
 
+**Demo**: [https://www.augustsnow.com/](https://www.augustsnow.com/)
+
 A minimal, elegant personal blog powered by Next.js 16 and Notion as a headless CMS. Now featuring Supabase authentication, likes, and comments. Zero cost deployment on Vercel.
 
 [English](README.md) | [繁體中文](README.zh-TW.md)

@@ -1,5 +1,7 @@
 # Notion CMS 個人部落格
 
+**演示網址**: [https://www.augustsnow.com/](https://www.augustsnow.com/)
+
 使用 Next.js 16 和 Notion 作為 Headless CMS 打造的極簡優雅個人部落格。支援 Supabase 身份驗證與社群功能，並可在 Vercel 上零成本部署。
 
 [English](README.md) | [繁體中文](README.zh-TW.md)
