@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 import LikeSection from "@/components/LikeSection";
+import CommentSection from "@/components/CommentSection";
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -72,6 +73,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <NotionRenderer blocks={blocks} />
 
       <LikeSection slug={slug} />
+      <CommentSection slug={slug} />
     </article>
   );
 }
