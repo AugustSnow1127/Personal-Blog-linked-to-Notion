@@ -48,6 +48,10 @@ export async function POST(
             return NextResponse.json({ error: "Content is required" }, { status: 400 });
         }
 
+        if (content.length > 1000) {
+            return NextResponse.json({ error: "Content is too long (max 1000 characters)" }, { status: 400 });
+        }
+
         // Prepare user metadata to store with comment
         const userName = user.user_metadata?.user_name || user.user_metadata?.full_name || user.email?.split('@')[0] || 'Anonymous';
         const avatarUrl = user.user_metadata?.avatar_url;

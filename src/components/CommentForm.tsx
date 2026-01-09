@@ -65,6 +65,7 @@ export default function CommentForm({ currentUser, onSubmit, isSubmitting }: Com
                         placeholder={currentUser ? "Add to the discussion..." : "Log in to comment..."}
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-100 focus:border-blue-400 outline-none transition-all resize-none min-h-[100px] text-sm"
                         disabled={isSubmitting}
+                        maxLength={1000}
                     />
                     <div className="flex justify-end mt-2">
                         <button
