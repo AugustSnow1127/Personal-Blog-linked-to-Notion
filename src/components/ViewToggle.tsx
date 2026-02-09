@@ -7,7 +7,7 @@ interface ViewToggleProps {
   defaultView?: 'grid' | 'list';
 }
 
-export default function ViewToggle({ onViewChange, defaultView = 'grid' }: ViewToggleProps) {
+export default function ViewToggle({ onViewChange, defaultView = 'list' }: ViewToggleProps) {
   const [view, setView] = useState<'grid' | 'list'>(defaultView);
   const [mounted, setMounted] = useState(false);
 
@@ -32,21 +32,21 @@ export default function ViewToggle({ onViewChange, defaultView = 'grid' }: ViewT
   return (
     <div className="flex gap-2 mb-6">
       <button
-        onClick={() => handleViewChange('grid')}
-        className={'p-2 rounded transition-colors ' + (view === 'grid' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200')}
-        aria-label="Grid view"
-      >
-        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M3 3h8v8H3V3m10 0h8v8h-8V3M3 13h8v8H3v-8m10 0h8v8h-8v-8z" />
-        </svg>
-      </button>
-      <button
         onClick={() => handleViewChange('list')}
         className={'p-2 rounded transition-colors ' + (view === 'list' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200')}
         aria-label="List view"
       >
         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
           <path d="M3 4h18v2H3V4m0 7h18v2H3v-2m0 7h18v2H3v-2z" />
+        </svg>
+      </button>
+      <button
+        onClick={() => handleViewChange('grid')}
+        className={'p-2 rounded transition-colors ' + (view === 'grid' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200')}
+        aria-label="Grid view"
+      >
+        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 3h8v8H3V3m10 0h8v8h-8V3M3 13h8v8H3v-8m10 0h8v8h-8v-8z" />
         </svg>
       </button>
     </div>
