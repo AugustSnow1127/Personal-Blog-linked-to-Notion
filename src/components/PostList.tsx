@@ -10,7 +10,7 @@ interface PostListProps {
 }
 
 export default function PostList({ posts }: PostListProps) {
-  const [view, setView] = useState<'grid' | 'list'>('list');
+  const [view, setView] = useState<'grid' | 'list'>('grid');
 
   if (posts.length === 0) {
     return <p className="text-gray-500">No posts yet. Create your first post in Notion!</p>;
@@ -18,7 +18,7 @@ export default function PostList({ posts }: PostListProps) {
 
   return (
     <div>
-      <ViewToggle onViewChange={setView} defaultView="list" />
+      <ViewToggle onViewChange={setView} defaultView="grid" />
 
       {view === 'grid' ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

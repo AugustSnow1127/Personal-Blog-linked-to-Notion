@@ -7,7 +7,7 @@ interface ViewToggleProps {
   defaultView?: 'grid' | 'list';
 }
 
-export default function ViewToggle({ onViewChange, defaultView = 'list' }: ViewToggleProps) {
+export default function ViewToggle({ onViewChange, defaultView = 'grid' }: ViewToggleProps) {
   const [view, setView] = useState<'grid' | 'list'>(defaultView);
   const [mounted, setMounted] = useState(false);
 

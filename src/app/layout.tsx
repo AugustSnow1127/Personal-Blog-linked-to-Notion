@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -27,11 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={openSans.className}>
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
-        <Header />
-        <main className="flex-1 max-w-4xl mx-auto px-4 py-8 w-full">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

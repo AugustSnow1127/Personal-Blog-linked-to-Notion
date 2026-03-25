@@ -1,13 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
-      { source: '/resume/en', destination: '/resume/en.html' },
-      { source: '/resume/zh', destination: '/resume/zh.html' },
-      { source: '/resume', destination: '/resume/en.html' },
-    ];
-  },
   images: {
     remotePatterns: [
       {
