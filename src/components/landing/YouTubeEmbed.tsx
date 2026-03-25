@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { Play } from 'lucide-react';
 
-interface YouTubeDemoProps {
+interface YouTubeEmbedProps {
   videoId: string;
 }
 
-export default function YouTubeDemo({ videoId }: YouTubeDemoProps) {
+export default function YouTubeEmbed({ videoId }: YouTubeEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -40,7 +42,7 @@ export default function YouTubeDemo({ videoId }: YouTubeDemoProps) {
             className="relative aspect-video rounded-2xl overflow-hidden shadow-lg shadow-purple-500/30"
             style={{
               border: '8px solid transparent',
-              background: 'linear-gradient(black, black) padding-box, linear-gradient(to right, #a855f7, #ec4899, #a855f7) border-box',
+              background: 'linear-gradient(black, black) padding-box, linear-gradient(to right, #a855f7, #ec4899, #a855f7) border-box'
             }}
           >
             {!isPlaying ? (
@@ -50,19 +52,19 @@ export default function YouTubeDemo({ videoId }: YouTubeDemoProps) {
                 aria-label="Play video"
               >
                 {isInView && (
-                  <img
+                  <Image
                     src={thumbnailUrl}
                     alt="Video thumbnail"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 896px"
+                    unoptimized
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-purple-500/40 group-hover:scale-110 transition-transform duration-300">
-                    {/* Play icon (inline SVG) */}
-                    <svg className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+                    <Play className="w-8 h-8 md:w-10 md:h-10 text-white fill-white ml-1" />
                   </div>
                 </div>
               </button>

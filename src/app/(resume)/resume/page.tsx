@@ -50,12 +50,13 @@ export default function ResumePage() {
               {isZh ? "聯絡資訊" : "Contact"}
             </h2>
             <ul className={s.contactList}>
-              <li><span className={s.icon}>&#9993;</span> angusqweas@gmail.com</li>
+              <li><span className={s.icon}>&#9993;</span> <a href="mailto:angusqweas@gmail.com" className={s.contactLink}>angusqweas@gmail.com</a></li>
               <li><span className={s.icon}>&#9742;</span> {isZh ? "0989-870-618" : "+886 989-870-618"}</li>
               <li><span className={s.icon}>&#9679;</span> {isZh ? "高雄市左營區" : "Kaohsiung, Taiwan"}</li>
-              <li><span className={s.icon}>&#128279;</span> linkedin.com/in/AugustSnow1127</li>
-              <li><span className={s.icon}>&#128279;</span> craftshorts.ai</li>
-              <li><span className={s.icon}>&#128187;</span> github.com/AugustSnow1127</li>
+              <li><span className={s.icon}>&#128279;</span> <a href="https://linkedin.com/in/AugustSnow1127" target="_blank" rel="noopener noreferrer" className={s.contactLink}>linkedin.com/in/AugustSnow1127</a></li>
+              <li><span className={s.icon}>&#128279;</span> <a href="https://augustsnow.com/projects/craftshorts" target="_blank" rel="noopener noreferrer" className={s.contactLink}>craftshorts.ai</a></li>
+              <li><span className={s.icon}>&#128187;</span> <a href="https://github.com/AugustSnow1127" target="_blank" rel="noopener noreferrer" className={s.contactLink}>github.com/AugustSnow1127</a></li>
+              <li><span className={s.icon}>&#128279;</span> <a href="https://www.augustsnow.com/resume" target="_blank" rel="noopener noreferrer" className={s.contactLink}>Online Resume</a></li>
             </ul>
           </section>
 

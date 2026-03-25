@@ -32,6 +32,16 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'i.imgur.com',
       },
+      // YouTube thumbnails
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
+      // DiceBear avatars
+      {
+        protocol: 'https',
+        hostname: 'api.dicebear.com',
+      },
       // GitHub avatars
       {
         protocol: 'https',

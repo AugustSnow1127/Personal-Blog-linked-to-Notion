@@ -139,6 +139,15 @@
   font-size: 12px;
 }
 
+.contactLink {
+  color: #D1D5DB;
+  text-decoration: none;
+}
+.contactLink:hover {
+  color: #E8B931;
+  text-decoration: underline;
+}
+
 .skillGroup { margin-bottom: 8px; }
 .skillGroup:last-child { margin-bottom: 0; }
 .skillLabel {
@@ -394,8 +403,23 @@
 
   .resume {
     width: 210mm;
-    min-height: 297mm;
+    min-height: auto;
     grid-template-columns: 30% 70%;
     box-shadow: none;
   }
+
+  .sidebar {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 20px 18px 16px;
+    gap: 12px;
+  }
+
+  .content {
+    padding: 24px 24px 16px;
+    gap: 12px;
+  }
+
+  .job { margin-bottom: 10px; }
+  .skillGroup { margin-bottom: 5px; }
 }

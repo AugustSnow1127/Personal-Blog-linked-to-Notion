@@ -1,0 +1,41 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#softGlow)">
+    <!-- First triangle (left) -->
+    <path d="M 300 300 L 540 512 L 300 724 Z"
+          fill="url(#mainGradient)"
+          stroke="url(#mainGradient)"
+          stroke-width="80"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          opacity="0.95"
+          style="filter: drop-shadow(0px 12px 32px rgba(99, 102, 241, 0.5))"/>
+
+    <!-- Second triangle (right) -->
+    <path d="M 520 300 L 760 512 L 520 724 Z"
+          fill="url(#mainGradient)"
+          stroke="url(#mainGradient)"
+          stroke-width="80"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          opacity="0.95"
+          style="filter: drop-shadow(0px 12px 32px rgba(99, 102, 241, 0.5))"/>
+  </g>
+</svg>
