@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>張家軒 - 軟體工程師履歷</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Microsoft JhengHei', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    background: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .lang-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 22px;
+    background: #1B2A4A;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 100;
+    font-family: inherit;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .lang-btn:hover { background: #2a3f6a; }
+
+  .resume {
+    width: 794px;
+    min-height: 1123px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  }
+
+  /* ===== LEFT SIDEBAR ===== */
+  .sidebar {
+    background: #1B2A4A;
+    color: #fff;
+    padding: 32px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .avatar-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+  .avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #2a3f6a;
+    border: 3px solid #E8B931;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #E8B931;
+    overflow: hidden;
+  }
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sidebar h1 {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+  }
+  .sidebar .subtitle {
+    text-align: center;
+    font-size: 11px;
+    color: #D1D5DB;
+    letter-spacing: 0.8px;
+    margin-top: 2px;
+  }
+
+  .sidebar h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #E8B931;
+    border-bottom: 1px solid rgba(232,185,49,0.3);
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .contact-list li {
+    font-size: 11px;
+    color: #D1D5DB;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-wrap: break-word;
+  }
+  .contact-list .icon {
+    flex-shrink: 0;
+    width: 14px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .skill-group { margin-bottom: 8px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-label {
+    font-size: 10.5px;
+    color: #93a3bf;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
+  }
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .pill {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 10.5px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+  .pill.highlight {
+    background: rgba(232,185,49,0.25);
+    color: #E8B931;
+  }
+
+  .edu-item {
+    margin-bottom: 6px;
+  }
+  .edu-item .degree {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .edu-item .school {
+    font-size: 10.5px;
+    color: #D1D5DB;
+  }
+  .edu-item .year {
+    font-size: 10px;
+    color: #93a3bf;
+  }
+
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #D1D5DB;
+    margin-bottom: 3px;
+  }
+  .lang-level {
+    color: #93a3bf;
+    font-size: 10.5px;
+  }
+
+  /* ===== HIGHLIGHT ===== */
+  mark.hl {
+    background: #FFF3B0;
+    color: #1B2A4A;
+    padding: 1px 3px;
+    border-radius: 2px;
+  }
+
+  /* ===== RIGHT MAIN CONTENT ===== */
+  .content {
+    padding: 32px 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .content h2 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #1B2A4A;
+    border-bottom: 2px solid #1B2A4A;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+
+  .summary p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  .job {
+    margin-bottom: 14px;
+  }
+  .job:last-child { margin-bottom: 0; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .job-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1B2A4A;
+  }
+  .job-date {
+    font-size: 13px;
+    color: #6B7280;
+    white-space: nowrap;
+  }
+  .job-company {
+    font-size: 13.5px;
+    color: #6B7280;
+    margin-bottom: 5px;
+  }
+
+  .job ul {
+    list-style: none;
+    padding: 0;
+  }
+  .job li {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #374151;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 3px;
+  }
+  .job li::before {
+    content: "\25B8";
+    position: absolute;
+    left: 0;
+    color: #1B2A4A;
+    font-size: 8px;
+    top: 1px;
+  }
+
+  .project {
+    margin-bottom: 10px;
+  }
+  .project:last-child { margin-bottom: 0; }
+  .project-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin-bottom: 2px;
+  }
+  .project-tech {
+    font-size: 12px;
+    color: #6B7280;
+    margin-bottom: 3px;
+  }
+  .project ul {
+    list-style: none;
+    padding: 0;
+  }
+  .project li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #374151;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 2px;
+  }
+  .project li::before {
+    content: "\25B8";
+    position: absolute;
+    left: 0;
+    color: #1B2A4A;
+    font-size: 8px;
+    top: 1px;
+  }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    body {
+      background: #fff;
+      padding: 0;
+      margin: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
+    .lang-btn { display: none !important; }
+    .resume {
+      width: 210mm;
+      min-height: 297mm;
+      box-shadow: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="lang-btn" href="/resume/en">English</a>
+
+<div class="resume">
+  <!-- ===== LEFT SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <img src="avatar.jpg" alt="張家軒">
+      </div>
+    </div>
+
+    <div>
+      <h1>張家軒</h1>
+      <div class="subtitle">Angus Chang &bull; 全端軟體工程師</div>
+    </div>
+
+    <section>
+      <h2>聯絡資訊</h2>
+      <ul class="contact-list">
+        <li><span class="icon">&#9993;</span> angusqweas@gmail.com</li>
+        <li><span class="icon">&#9742;</span> 0989-870-618</li>
+        <li><span class="icon">&#9679;</span> 高雄市左營區</li>
+        <li><span class="icon">&#128279;</span> linkedin.com/in/AugustSnow1127</li>
+        <li><span class="icon">&#128279;</span> craftshorts.ai</li>
+        <li><span class="icon">&#128187;</span> github.com/AugustSnow1127</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>技術能力</h2>
+
+      <div class="skill-group">
+        <div class="skill-label">程式語言</div>
+        <div class="pills">
+          <span class="pill">JavaScript</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill highlight">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">前端</div>
+        <div class="pills">
+          <span class="pill">React</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">HTML / CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">後端</div>
+        <div class="pills">
+          <span class="pill">Node.js</span>
+          <span class="pill">NestJS</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">Redis</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">資料庫</div>
+        <div class="pills">
+          <span class="pill highlight">PostgreSQL</span>
+          <span class="pill highlight">MySQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">雲端與 DevOps</div>
+        <div class="pills">
+          <span class="pill highlight">GCP</span>
+          <span class="pill">Docker</span>
+          <span class="pill">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">AI Skills</div>
+        <div class="pills">
+          <span class="pill">Claude Code</span>
+          <span class="pill">Claude Skills</span>
+          <span class="pill">Spec-Driven Dev</span>
+          <span class="pill">Context Mgmt</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">工具與方法</div>
+        <div class="pills">
+          <span class="pill">Git</span>
+          <span class="pill">Agile / Scrum</span>
+          <span class="pill">Unit Testing</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>學歷</h2>
+      <div class="edu-item">
+        <div class="degree">資訊管理學系 學士</div>
+        <div class="school">國立中正大學</div>
+        <div class="year">2020 年畢業 &mdash; 嘉義</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>語言能力</h2>
+      <div class="lang-item">
+        <span>中文</span>
+        <span class="lang-level">母語</span>
+      </div>
+      <div class="lang-item">
+        <span>英文</span>
+        <span class="lang-level">工作溝通程度</span>
+      </div>
+    </section>
+  </aside>
+
+  <!-- ===== RIGHT MAIN CONTENT ===== -->
+  <main class="content">
+    <section class="summary">
+      <h2>專業簡介</h2>
+      <p>
+        擁有 3.5 年全端開發經驗的軟體工程師，曾任職於 Fortune 500 企業緯創資通，負責建構可擴展的 Web 應用程式與 AI 驅動的系統。<mark class="hl">透過 SQL 與架構優化，為 50+ 併發用戶降低 90% API 回應時間。</mark><mark class="hl">目前獨立開發 AI 影音生成 SaaS，以分散式雲原生架構達成 99%+ 生成成功率。</mark>具備 0 到 1 產品開發、跨部門領導與工程師指導的實證經歷。
+      </p>
+    </section>
+
+    <section class="experience">
+      <h2>工作經歷</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">全端軟體工程師</span>
+          <span class="job-date">2022/02 &ndash; 2025/07</span>
+        </div>
+        <div class="job-company">緯創資通股份有限公司 &mdash; 高雄</div>
+        <ul>
+          <li><mark class="hl">主導建構企業級 AI 助理系統，整合 2 個自訂 LLM API，透過迭代式 prompt 優化與回饋驅動開發，達到 8/10 用戶滿意度</mark></li>
+          <li>重構 50% 以上前端元件以適應 Ant Design 大版本升級，提升 80% 渲染與 API 回應速度</li>
+          <li><mark class="hl">將多個企業系統的認證機制從 JWT 遷移至 Azure AD SSO（msal-react），為 200+ 用戶實現集中式身份管理</mark></li>
+          <li>3 年以上期間歷經 4 套不同企業系統的開發交付，快速適應不同業務領域，每週主持跨據點站會對齊優先級</li>
+          <li>擔任 5 人工程團隊的 Code Reviewer，落實編碼規範並在上線前攔截問題，維護程式碼品質</li>
+          <li>指導 2 位新進工程師完成結構化入職培訓，使其在 4 個月內獨立貢獻核心功能</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">軟體開發工程師（約聘）</span>
+          <span class="job-date">2021/10 &ndash; 2022/01</span>
+        </div>
+        <div class="job-company">衛生福利部桃園療養院 &mdash; 桃園</div>
+        <ul>
+          <li>使用 Vue.js 開發護理師與病人預約排程系統，將臨床人員的手動預約流程數位化</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>重點專案</h2>
+
+      <div class="project">
+        <div class="project-name">CraftShorts.ai（個人專案）</div>
+        <div class="project-tech">Next.js &bull; TypeScript &bull; Node.js &bull; Redis &bull; BullMQ &bull; Prisma &bull; PostgreSQL &bull; GCP Cloud Run</div>
+        <ul>
+          <li><mark class="hl">獨立架構 AI 影音生成 SaaS，建構分散式任務佇列（Redis + BullMQ）串接 OpenAI、Stability AI、Vertex AI pipeline，搭配指數退避重試機制，達成 99%+ 生成成功率</mark></li>
+          <li>實作 Stripe 訂閱基礎設施，透過事件去重與時間戳驗證實現冪等 webhook 處理，防止重複扣款</li>
+          <li><mark class="hl">建構 GitLab CI/CD 自動化部署 pipeline，搭配多階段 Docker build 部署至 GCP Cloud Run，縮短 70% 部署時間</mark></li>
+          <li>撰寫 SEO 優化文章提升自然搜尋流量；設計並執行精準廣告投放策略，進行用戶獲取與市場驗證</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>
