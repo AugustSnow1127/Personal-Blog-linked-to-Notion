@@ -26,6 +26,11 @@ export default async function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/projects/craftshorts" className="text-xs text-gray-600 hover:text-gray-900">
+                Projects
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="text-xs text-gray-600 hover:text-gray-900">
                 Contact
               </Link>
