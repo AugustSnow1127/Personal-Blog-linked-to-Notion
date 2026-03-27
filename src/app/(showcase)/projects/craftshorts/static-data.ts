@@ -29,6 +29,9 @@ export const SHOWCASE_VIDEOS: ShowcaseVideo[] = [
   { id: '4', videoUrl: '/showcase-videos/video-4.mp4', title: 'Fruit Soda', category: 'Fruit Soda', description: '', sortOrder: 3 },
   { id: '5', videoUrl: '/showcase-videos/video-5.mp4', title: 'Planetary', category: 'Planetary', description: '', sortOrder: 4 },
   { id: '6', videoUrl: '/showcase-videos/video-6.mp4', title: 'Kinetic Sand', category: 'Kinetic Sand', description: '', sortOrder: 5 },
+  { id: '7', videoUrl: '/showcase-videos/video-7.mp4', title: 'Lemon Soda', category: 'Fruit Soda', description: '', sortOrder: 6 },
+  { id: '8', videoUrl: '/showcase-videos/video-8.mp4', title: 'Peach Soda', category: 'Fruit Soda', description: '', sortOrder: 7 },
+  { id: '9', videoUrl: '/showcase-videos/video-9.mp4', title: 'Galaxy', category: 'Planetary', description: '', sortOrder: 8 },
 ];
 
 // ===== Creator Avatars (Social Proof) =====
