@@ -76,7 +76,7 @@
 }
 
 .sidebarName {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
   letter-spacing: 1.5px;
@@ -89,20 +89,20 @@
   text-transform: none;
 }
 .nameSubtext {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
 .subtitle {
   text-align: center;
-  font-size: 11px;
+  font-size: 10px;
   color: #D1D5DB;
   letter-spacing: 0.8px;
   margin-top: 2px;
 }
 
 .sidebarHeading {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -125,7 +125,7 @@
   margin: 0;
 }
 .contactList li {
-  font-size: 11px;
+  font-size: 10px;
   color: #D1D5DB;
   display: flex;
   align-items: center;
@@ -136,7 +136,7 @@
   flex-shrink: 0;
   width: 14px;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .contactLink {
@@ -151,7 +151,7 @@
 .skillGroup { margin-bottom: 8px; }
 .skillGroup:last-child { margin-bottom: 0; }
 .skillLabel {
-  font-size: 10.5px;
+  font-size: 9.5px;
   color: #93a3bf;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -168,7 +168,7 @@
 .pill {
   background: rgba(255,255,255,0.12);
   color: #fff;
-  font-size: 10.5px;
+  font-size: 9.5px;
   padding: 2px 8px;
   border-radius: 10px;
   white-space: nowrap;
@@ -180,29 +180,29 @@
 
 .eduItem { margin-bottom: 6px; }
 .degree {
-  font-size: 11.5px;
+  font-size: 10.5px;
   font-weight: 600;
   color: #fff;
 }
 .school {
-  font-size: 10.5px;
+  font-size: 9.5px;
   color: #D1D5DB;
 }
 .year {
-  font-size: 10px;
+  font-size: 9px;
   color: #93a3bf;
 }
 
 .langItem {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 10px;
   color: #D1D5DB;
   margin-bottom: 3px;
 }
 .langLevel {
   color: #93a3bf;
-  font-size: 10.5px;
+  font-size: 9.5px;
 }
 
 /* ===== HIGHLIGHT ===== */
@@ -397,15 +397,18 @@
     background: #fff;
     padding: 0;
     margin: 0;
+    min-height: auto;
   }
 
   .langBtn { display: none !important; }
 
   .resume {
     width: 210mm;
+    height: 297mm;
     min-height: auto;
     grid-template-columns: 30% 70%;
     box-shadow: none;
+    overflow: hidden;
   }
 
   .sidebar {

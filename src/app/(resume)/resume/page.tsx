@@ -24,7 +24,7 @@ export default function ResumePage() {
           <div className={s.avatarWrap}>
             <div className={s.avatar}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/resume/avatar.png" alt={isZh ? "張家軒" : "Angus Chang"} />
+              <img src="/resume/avatar.jpg" alt={isZh ? "張家軒" : "Angus Chang"} />
             </div>
           </div>
 
