@@ -209,8 +209,10 @@
 .hl {
   background: #FFF3B0;
   color: #1B2A4A;
-  padding: 1px 3px;
+  padding: 0 3px 0 0;
   border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* ===== RIGHT MAIN CONTENT ===== */
